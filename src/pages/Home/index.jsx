@@ -1,28 +1,9 @@
-import axios from "axios";
-import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
-
 export default function Home() {
-  const [posts, setPosts] = useState([]);
-
-  useEffect(() => {
-    axios
-      .get("https://jsonplaceholder.typicode.com/posts?_limit=10")
-      .then((res) => setPosts(res.data));
-  }, []);
-
   return (
-    <>
-      <div>
-        <h2>Lista de Posts</h2>
-        <ul>
-          {posts.map((post) => (
-            <li key={post.id}>
-              <Link to={`detalhes/${post.id}`}>{post.title}</Link>
-            </li>
-          ))}
-        </ul>
-      </div>
-    </>
+    <div className="flex flex-col items-center justify-center min-h-screen text-center">
+      <h1 className="text-3xl font-bold">Bem-vindo ao site dos Cachorros 🐶</h1>
+      <p className="mt-4">Clique no menu para ver um cachorro fofo!</p>
+    </div>
   );
 }
+

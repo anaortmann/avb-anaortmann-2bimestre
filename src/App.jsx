@@ -1,14 +1,14 @@
-import "./App.css";
-import AppRoutes from "./routes/AppRoutes";
+import Navbar from './components/Navbar';
+import AppRoutes from './routes/AppRoutes';
 
 function App() {
   return (
     <>
-      <div>
-        <AppRoutes />
-      </div>
+      <Navbar />
+      <AppRoutes />
     </>
   );
 }
 
 export default App;
+
