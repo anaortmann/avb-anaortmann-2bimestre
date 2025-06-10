@@ -1,9 +1,9 @@
-export default function Home() {
-  return (
-    <div className="flex flex-col items-center justify-center min-h-screen text-center">
-      <h1 className="text-3xl font-bold">Bem-vindo ao site dos Cachorros 🐶</h1>
-      <p className="mt-4">Clique no menu para ver um cachorro fofo!</p>
+<nav className="w-full bg-blue-600 text-white py-4">
+  <div className="container mx-auto flex flex-col items-center justify-center">
+    <h1 className="text-2xl font-bold">🐶 DogApp</h1>
+    <div className="flex gap-6 mt-2">
+      <a href="/" className="hover:underline">Início</a>
+      <a href="/cachorros" className="hover:underline">Cachorros</a>
     </div>
-  );
-}
-
+  </div>
+</nav>

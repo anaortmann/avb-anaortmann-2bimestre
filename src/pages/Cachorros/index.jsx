@@ -14,20 +14,25 @@ export default function Cachorros() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen text-center">
-      <h2 className="text-2xl font-semibold">Veja um cachorro aleatório!</h2>
+    <div className="flex flex-col items-center justify-center min-h-screen px-4 text-center">
+      <h2 className="text-2xl md:text-3xl font-semibold">Veja um cachorro aleatório!</h2>
       <button
         onClick={buscarCachorro}
-        className="mt-4 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
+        className="mt-4 bg-black text-white px-4 py-2 rounded hover:bg-gray-800"
       >
         Mostrar Cachorro 🐾
       </button>
 
-      {imagem && (
-        <div className="flex flex-col items-center justify-center min-h-screen text-center">
-          <img src={imagem} alt="Cachorro" className="flex flex-col items-center justify-center min-h-screen text-center" />
-        </div>
-      )}
+    {imagem && (
+      <div className="mt-6">
+        <img
+          src={imagem}
+          alt="Cachorro"
+          className="w-[300px] h-[300px] object-cover rounded shadow-lg mx-auto"
+        />
+      </div>
+    )}
+
     </div>
   );
 }
